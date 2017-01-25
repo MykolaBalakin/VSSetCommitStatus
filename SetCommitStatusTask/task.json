@@ -1,0 +1,60 @@
+{
+  "id": "83b4bc85-58de-44d4-9a62-e5ee2dcab671",
+  "name": "SetCommitStatusTask",
+  "friendlyName": "Set commit status",
+  "description": "Set commit status using GitHub API",
+  "category": "Utility",
+  "author": "Nikolay Balakin",
+  "version": {
+    "Major": 0,
+    "Minor": 1,
+    "Patch": 0
+  },
+  "minimumAgentVersion": "1.105.6",
+  "instanceNameFormat": "Set commit status",
+  "demands": [
+    "node.js"
+  ],
+  "inputs": [
+    {
+      "name": "PersonalAccessToken",
+      "type": "string",
+      "label": "GitHub personal access token",
+      "required": true
+    },
+    {
+      "name": "StatusId",
+      "type": "string",
+      "label": "Status id",
+      "required": true
+    },
+    {
+      "name": "State",
+      "type": "pickList",
+      "label": "Status state",
+      "required": true,
+      "defaultValue": "Success",
+      "options": {
+        "Pending": "Pending",
+        "Success": "Success",
+        "Error": "Error",
+        "Failed": "Failed"
+      }
+    },
+    {
+      "name": "TargetUrl",
+      "type": "string",
+      "label": "Target URL"
+    },
+    {
+      "name": "Description",
+      "type": "string",
+      "label": "Description"
+    }
+  ],
+  "execution": {
+    "Node": {
+      "target": "SetCommitStatusTask.js"
+    }
+  }
+}

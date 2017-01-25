@@ -1,0 +1,15 @@
+{
+  "name": "github-set-commit-status",
+  "version": "0.1.0",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-exec": "^2.1.2",
+    "gulp-typescript": "^3.0.1",
+    "typescript": "^2.0.3",
+    "vsts-task-lib": "^0.9.20"
+  },
+  "devDependencies": {
+    "gulp": "github:gulpjs/gulp#4.0"
+  }
+}

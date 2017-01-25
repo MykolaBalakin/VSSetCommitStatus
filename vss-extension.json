@@ -1,0 +1,36 @@
+{
+  "manifestVersion": 1,
+  "id": "SetCommitStatus",
+  "name": "Set commit status",
+  "description": "Build tasks for setting commit status on GitHub",
+  "version": "0.1",
+  "publisher": "balakin",
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "categories": [
+    "Integrate"
+  ],
+  "icons": {
+    "default": "icon.png"
+  },
+  "files": [
+    {
+      "path": "SetCommitStatusTask"
+    }
+  ],
+  "contributions": [
+    {
+      "id": "SetCommitStatusTask",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "SetCommitStatusTask"
+      }
+    }
+  ]
+}
